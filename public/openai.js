@@ -3,6 +3,10 @@
 $("#send").on("click",function(e) {
 
     var text = $("#chat_message").val();
+    if (text == "") {
+    $("#chat_message").focus();
+    return false;
+    }
     $(".messages").append("<li class='sent'>" + text + "</li>");
     $("#chat_message").val("");
     $.ajax({
@@ -19,7 +23,7 @@ $("#send").on("click",function(e) {
         error: function(err) {
             console.log(err);
         }
-        
+
     });
 
 })
