@@ -13,8 +13,13 @@ $("#send").on("click",function(e) {
         },
         data: JSON.stringify({text: text}),
         success: function(data) {
+            console.log(data);
             $(".messages").append("<li class='message'>" + data + "</li>");
+        },
+        error: function(err) {
+            console.log(err);
         }
+        
     });
 
 })
