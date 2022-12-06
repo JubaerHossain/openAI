@@ -19,7 +19,9 @@ app.use(
 );
 app.use(bodyParser.json());
 
+app.set('view engine','ejs'); 
 
+app.engine('ejs', require('ejs').__express);
 
 app.use(express.static("public"));
 
