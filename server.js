@@ -18,7 +18,7 @@ app.use(
   }),
 );
 app.use(bodyParser.json());
-
+const ejs = require('ejs')
 app.set('view engine','ejs'); 
 
 
