@@ -1,5 +1,6 @@
 
 $(document).ready(function() {
+
 $(".main__chat_window").animate({ scrollTop: $('.messages').height() }, "fast");
 function ChatBot(){
     var text = $("#chat_message").val();
@@ -9,11 +10,10 @@ function ChatBot(){
     }
     $(".messages").append("<li class='sent'>" + String(text) + "</li>");
     // messages section scroll to bottom
-    $
     $(".main__chat_window").animate({ scrollTop: $('.messages').height() }, "fast");
     $("#chat_message").val("");
     $.ajax({
-        url: 'http://localhost:3000/chat',
+        url: window.location.href + 'chat',
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
