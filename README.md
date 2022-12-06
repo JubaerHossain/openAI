@@ -1,4 +1,4 @@
-# Video-chat-using node js
+# chatbot using node js + openai
 
 ```sh
 npm install
