@@ -34,11 +34,11 @@ app.post('/chat', async(req, res)  => {
   await openai.createCompletion({
     model: "text-davinci-003",
     prompt: text,
-    temperature: 0.5,
-    max_tokens: 60,
-    top_p: 0.3,
-    frequency_penalty: 0.5,
-    presence_penalty: 0,
+    temperature: 0.9,
+    max_tokens: 150,
+    top_p: 1,
+    frequency_penalty: 0.0,
+    presence_penalty: 0.6
   }).then((response) => {
 
     res.send(response.data.choices[0].text);

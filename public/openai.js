@@ -7,7 +7,7 @@ function ChatBot(){
     $("#chat_message").focus();
     return false;
     }
-    $(".messages").append("<li class='sent'>" + text + "</li>");
+    $(".messages").append("<li class='sent'>" + String(text) + "</li>");
     // messages section scroll to bottom
     $
     $(".main__chat_window").animate({ scrollTop: $('.messages').height() }, "fast");
