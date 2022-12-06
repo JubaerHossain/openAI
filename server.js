@@ -67,6 +67,6 @@ app.use((err, req, res, next) => {
 
 
 
-app.listen({ port: process.env.PORT || 3000 }, () => {
-  console.log("Server is running on port localhost: 3000");
+app.listen({ port: process.env.PORT || 3004 }, () => {
+  console.log("Server is running on port localhost:" + process.env.PORT);
 });
