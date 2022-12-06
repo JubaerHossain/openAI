@@ -1,4 +1,6 @@
 
+$(document).ready(function() {
+$(".main__chat_window").animate({ scrollTop: $('.messages').height() }, "fast");
 function ChatBot(){
     var text = $("#chat_message").val();
     if (text == "") {
@@ -6,6 +8,9 @@ function ChatBot(){
     return false;
     }
     $(".messages").append("<li class='sent'>" + text + "</li>");
+    // messages section scroll to bottom
+    $
+    $(".main__chat_window").animate({ scrollTop: $('.messages').height() }, "fast");
     $("#chat_message").val("");
     $.ajax({
         url: 'http://localhost:3000/chat',
@@ -17,6 +22,7 @@ function ChatBot(){
         success: function(data) {
             // console.log(data);
             $(".messages").append("<li class='message'>" + data + "</li>");
+            $(".main__chat_window").animate({ scrollTop: $('.messages').height() }, "fast");
         },
         error: function(err) {
             console.log(err);
@@ -36,4 +42,6 @@ $("#chat_message").on('keyup ',function(e) {
         e.preventDefault();
         ChatBot();
     }
+});
+
 });

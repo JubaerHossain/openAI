@@ -3,7 +3,7 @@ const { Configuration, OpenAIApi } = require("openai");
 var bodyParser = require('body-parser')
 var cors = require('cors')
 
-const open_secret = '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';
+const open_secret = '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';
 
 const configuration = new Configuration({
   apiKey: open_secret,
@@ -38,6 +38,7 @@ app.post('/chat', async(req, res)  => {
     frequency_penalty: 0.5,
     presence_penalty: 0,
   }).then((response) => {
+    
     res.send(response.data.choices[0].text);
   }
   ).catch((err) => {
