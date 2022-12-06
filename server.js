@@ -3,7 +3,7 @@ const { Configuration, OpenAIApi } = require("openai");
 var bodyParser = require('body-parser')
 var cors = require('cors')
 
-const open_secret = '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';
+const open_secret = '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';
 
 const configuration = new Configuration({
   apiKey: open_secret,

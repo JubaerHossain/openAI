@@ -29,8 +29,12 @@
 
 .main {
   overflow: hidden;
-  height: 92vh;
+  height: 100vh;
   display: flex;
+  background: #efe7dd url("https://cloud.githubusercontent.com/assets/398893/15136779/4e765036-1639-11e6-9201-67e728e86f39.jpg") repeat;
+
+  background-color: #e6ddd4;
+
 }
 
 .main__left {
@@ -94,7 +98,6 @@ video {
   display: flex;
   flex-direction: column;
   flex: 0.3;
-  background-color: #242f41;
   width: 100%;
 }
 
@@ -112,6 +115,7 @@ video {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 30px;
 }
 
 .main__message_container > input {
@@ -193,4 +197,19 @@ video {
   #showChat {
     display: flex;
   }
+}
+
+.messages .sent{
+  background: #e1ffc7;
+  border-radius: 5px 0px 5px 5px;
+  float: right;
+}
+.options__button{
+  background: #008a7c;
+  border-radius: 50%;
+  float: right;
+}
+
+#chat_message:focus-visible{
+  outline: none;
 }

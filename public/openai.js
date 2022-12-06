@@ -1,7 +1,5 @@
 
-
-$("#send").on("click",function(e) {
-
+function ChatBot(){
     var text = $("#chat_message").val();
     if (text == "") {
     $("#chat_message").focus();
@@ -17,7 +15,7 @@ $("#send").on("click",function(e) {
         },
         data: JSON.stringify({text: text}),
         success: function(data) {
-            console.log(data);
+            // console.log(data);
             $(".messages").append("<li class='message'>" + data + "</li>");
         },
         error: function(err) {
@@ -25,5 +23,17 @@ $("#send").on("click",function(e) {
         }
 
     });
+}
+
+$("#send").on("click",function(e) {
+    e.preventDefault();
+    ChatBot();   
 
 })
+
+$("#chat_message").on('keyup ',function(e) {
+    if (e.key === "Enter") {
+        e.preventDefault();
+        ChatBot();
+    }
+});
